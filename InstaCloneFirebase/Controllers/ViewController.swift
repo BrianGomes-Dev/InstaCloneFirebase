@@ -8,13 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func LoginClicked(_ sender: Any) {
+        performSegue(withIdentifier: "LoginVCToFeedVC", sender: self)
+    }
+    
+    @IBAction func SignInClicked(_ sender: Any) {
+        
+    }
 }
 
