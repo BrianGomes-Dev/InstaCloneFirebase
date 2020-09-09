@@ -44,6 +44,30 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                         let imageUrl = url?.absoluteString
                         print(imageUrl)
                         self.makeAlert(titleInput: "Alert", messageInput: "Image Upload Success!")
+                        
+                        //FireStore Database
+                        
+                        let firestoreDatabase = Firestore.firestore()
+                        
+                        var firestoreReference : DocumentReference? = nil
+                        
+                        let firestorePost = ["imageUrl":imageUrl!,"postedBy":Auth.auth().currentUser!.email,"postComment":self.commentTextFeild.text!,"date":FieldValue.serverTimestamp(),
+                        "likes":0 ] as [String : Any]
+                        
+                        firestoreReference = firestoreDatabase.collection("Posts").addDocument(data: firestorePost,completion: { (error) in
+                            
+                            if error != nil{
+                                self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "")
+                            
+                            }else{
+                                self.commentTextFeild.text = ""
+                                self.UploadImageView.image = #imageLiteral(resourceName: "add")
+                                self.tabBarController?.selectedIndex = 0
+                            }
+                            
+                        })
+                        
+                        
                     }
                     
                 }
