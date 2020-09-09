@@ -71,14 +71,40 @@
                     <view key="view" contentMode="scaleToFill" id="O2e-fH-yHj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uxH-Oz-ukE">
+                                <rect key="frame" x="46" y="116" width="322" height="268"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QPz-ek-j8g">
+                                <rect key="frame" x="46" y="431" width="322" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10M-HK-dZo">
+                                <rect key="frame" x="177" y="511" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="UPLOAD"/>
+                                <connections>
+                                    <action selector="UploadClicked:" destination="rOr-dV-Lc3" eventType="touchUpInside" id="PGN-Wm-3vL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Vey-nl-W30"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" image="square.and.arrow.up" catalog="system" id="0yQ-4q-s3v"/>
+                    <connections>
+                        <outlet property="UploadImageView" destination="uxH-Oz-ukE" id="n3W-QP-SeK"/>
+                        <outlet property="commentTextFeild" destination="QPz-ek-j8g" id="SPN-LF-euK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yq3-1T-Xoo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="503"/>
+            <point key="canvasLocation" x="1608.6956521739132" y="502.90178571428567"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Te0-Qx-XeD">
@@ -128,7 +154,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="q7T-Bh-Rwz">
             <objects>
-                <tabBarController id="Y0b-ax-yWY" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="Y0b-ax-yWY" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xnv-0e-u01">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -148,6 +174,7 @@
     <resources>
         <image name="checkmark.seal" catalog="system" width="128" height="122"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>

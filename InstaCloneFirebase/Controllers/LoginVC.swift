@@ -19,7 +19,23 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func LoginClicked(_ sender: Any) {
-        performSegue(withIdentifier: "LoginVCToFeedVC", sender: self)
+        
+        if emailTxtFld.text != "" && passwordTxtFld.text != ""{
+            Auth.auth().signIn(withEmail:  emailTxtFld.text!, password: passwordTxtFld.text!) { (authData, error) in
+                             
+                  if error != nil{
+                      self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "Error")
+                       print(error)
+                  }else{
+                      self.performSegue(withIdentifier: "LoginVCToFeedVC", sender: self)
+                  }
+                  
+              }
+              }else{
+                  
+                  makeAlert(titleInput: "Error", messageInput: "Invalid Username/Password")
+              }
+        
     }
     
     
