@@ -52,8 +52,7 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                         
                         var firestoreReference : DocumentReference? = nil
                         
-                        let firestorePost = ["imageUrl":imageUrl!,"postedBy":Auth.auth().currentUser!.email,"postCaption":self.commentTextFeild.text!,"date": String(TimeStamp),
-                        "likes":0 ] as [String : Any]
+                        let firestorePost = ["imageUrl":imageUrl!,"postedBy":Auth.auth().currentUser!.email,"postCaption":self.commentTextFeild.text!,"date": String(TimeStamp),"likedPost":false,"likes":0 ] as [String : Any]
                         
                         firestoreReference = firestoreDatabase.collection("Posts").addDocument(data: firestorePost,completion: { (error) in
                             

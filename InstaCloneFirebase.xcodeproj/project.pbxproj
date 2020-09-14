@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0512E1A2250F9F380094D28A /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0512E1A1250F9F320094D28A /* Billabong.ttf */; };
 		052CB4CE250E3443008BC637 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052CB4CD250E3443008BC637 /* FeedData.swift */; };
 		0535FF7025078B9B0047BD02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FF6F25078B9B0047BD02 /* AppDelegate.swift */; };
 		0535FF7225078B9B0047BD02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FF7125078B9B0047BD02 /* SceneDelegate.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0512E1A1250F9F320094D28A /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 		052CB4CD250E3443008BC637 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		0535FF6C25078B9B0047BD02 /* InstaCloneFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0535FF6F25078B9B0047BD02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0512E1A0250F9F130094D28A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0512E1A1250F9F320094D28A /* Billabong.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		052CB4CC250E3426008BC637 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 				0535FF8825078B9E0047BD02 /* InstaCloneFirebaseTests */,
 				0535FF9325078B9E0047BD02 /* InstaCloneFirebaseUITests */,
 				0535FF6D25078B9B0047BD02 /* Products */,
+				0512E1A0250F9F130094D28A /* Fonts */,
 				A1F67D0833A78252F10CFA53 /* Pods */,
 				D4D5F7BC7E2ECFD8720781F7 /* Frameworks */,
 			);
@@ -336,6 +347,7 @@
 				05E6523A25078E370073A60E /* GoogleService-Info.plist in Resources */,
 				0535FF7F25078B9E0047BD02 /* LaunchScreen.storyboard in Resources */,
 				0535FF7C25078B9D0047BD02 /* Assets.xcassets in Resources */,
+				0512E1A2250F9F380094D28A /* Billabong.ttf in Resources */,
 				0535FF7725078B9B0047BD02 /* Main.storyboard in Resources */,
 				054009722509505800967446 /* FeedCell.xib in Resources */,
 			);

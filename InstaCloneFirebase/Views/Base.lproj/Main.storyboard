@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Billabong.ttf">
+            <string>Billabong</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
@@ -64,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="-271.01449275362319" y="178.79464285714286"/>
         </scene>
-        <!--Item 2-->
+        <!--Upload-->
         <scene sceneID="udv-VI-9Ov">
             <objects>
                 <viewController id="rOr-dV-Lc3" customClass="UploadVC" customModule="InstaCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +101,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Vey-nl-W30"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="square.and.arrow.up" catalog="system" id="0yQ-4q-s3v"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="square.and.arrow.up" catalog="system" id="0yQ-4q-s3v"/>
                     <connections>
                         <outlet property="UploadImageView" destination="uxH-Oz-ukE" id="n3W-QP-SeK"/>
                         <outlet property="commentTextFeild" destination="QPz-ek-j8g" id="SPN-LF-euK"/>
@@ -135,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="2378" y="122"/>
         </scene>
-        <!--Item 1-->
+        <!--Feed-->
         <scene sceneID="eQ8-Qa-IGj">
             <objects>
                 <viewController id="haD-h5-7Br" customClass="FeedVC" customModule="InstaCloneFirebase" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,22 +149,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gk7-0u-mXC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZ4-Ke-b4Y" userLabel="TopBarView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKQ-tf-Ozj">
+                                        <rect key="frame" x="10" y="3" width="394" height="44.5"/>
+                                        <fontDescription key="fontDescription" name="Billabong" family="Billabong" pointSize="36"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bKQ-tf-Ozj" firstAttribute="centerX" secondItem="bZ4-Ke-b4Y" secondAttribute="centerX" id="2OG-np-ORg"/>
+                                    <constraint firstItem="bKQ-tf-Ozj" firstAttribute="centerY" secondItem="bZ4-Ke-b4Y" secondAttribute="centerY" id="4FF-H5-lLc"/>
+                                    <constraint firstItem="bKQ-tf-Ozj" firstAttribute="leading" secondItem="bZ4-Ke-b4Y" secondAttribute="leading" constant="10" id="WvL-5h-lpu"/>
+                                    <constraint firstAttribute="height" constant="50" id="XSA-6D-7HB"/>
+                                    <constraint firstAttribute="trailing" secondItem="bKQ-tf-Ozj" secondAttribute="trailing" constant="10" id="eJm-sp-Pwo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gk7-0u-mXC" firstAttribute="leading" secondItem="27z-27-Nw9" secondAttribute="leading" id="9WF-8y-reP"/>
                             <constraint firstItem="27z-27-Nw9" firstAttribute="bottom" secondItem="gk7-0u-mXC" secondAttribute="bottom" id="AC7-NA-fsb"/>
+                            <constraint firstItem="bZ4-Ke-b4Y" firstAttribute="top" secondItem="6Q5-sq-Lqt" secondAttribute="topMargin" id="HxP-Jw-Fqz"/>
                             <constraint firstItem="27z-27-Nw9" firstAttribute="trailing" secondItem="gk7-0u-mXC" secondAttribute="trailing" id="R5K-gP-tEu"/>
-                            <constraint firstItem="gk7-0u-mXC" firstAttribute="top" secondItem="27z-27-Nw9" secondAttribute="top" id="o6j-HC-BAN"/>
+                            <constraint firstItem="bZ4-Ke-b4Y" firstAttribute="leading" secondItem="27z-27-Nw9" secondAttribute="leading" id="RDQ-5d-g8W"/>
+                            <constraint firstItem="gk7-0u-mXC" firstAttribute="top" secondItem="bZ4-Ke-b4Y" secondAttribute="bottom" id="UE6-ic-Bn8"/>
+                            <constraint firstItem="27z-27-Nw9" firstAttribute="trailing" secondItem="bZ4-Ke-b4Y" secondAttribute="trailing" id="e7R-bb-X1g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="27z-27-Nw9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="heart" catalog="system" id="mWX-uX-gUh"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="doc.richtext" catalog="system" id="mWX-uX-gUh"/>
                     <connections>
                         <outlet property="FeedTableView" destination="gk7-0u-mXC" id="f38-Mg-ik0"/>
+                        <outlet property="topBarView" destination="bZ4-Ke-b4Y" id="bTN-Ey-7yG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8BP-lS-xzB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,7 +217,7 @@
     <resources>
         <image name="add" width="512" height="384"/>
         <image name="checkmark.seal" catalog="system" width="128" height="122"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="doc.richtext" catalog="system" width="115" height="128"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>

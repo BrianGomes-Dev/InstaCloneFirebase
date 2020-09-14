@@ -15,9 +15,11 @@ class FeedData: NSObject {
    var postCaption:String!
     var imageUrl:String!
     var date:String!
+    var documentID:String!
+    var likedPost:Bool!
     
     
-    init(userName:String, likes:Int,postCaption:String,imageUrl:String,date:String)
+    init(userName:String, likes:Int,postCaption:String,imageUrl:String,date:String,documentID:String,likedPost:Bool)
     {
         super.init()
         self.userName = userName
@@ -25,6 +27,8 @@ class FeedData: NSObject {
         self.postCaption = postCaption
         self.imageUrl = imageUrl
         self.date = formatBookingTime(ts: date)
+        self.documentID = documentID
+        self.likedPost = likedPost
     }
     
     

@@ -12,6 +12,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
 pod 'Firebase/Core'
+pod 'Kingfisher', '~> 5.0'
 
 
   target 'InstaCloneFirebaseTests' do
