@@ -27,6 +27,7 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
         let storageReference = storage.reference()
         
         let mediaFolder = storageReference.child("media")
+        let TimeStamp = Date().timeIntervalSince1970 * 1000
         
         if let data = UploadImageView.image?.jpegData(compressionQuality: 0.4){
         
@@ -51,7 +52,7 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                         
                         var firestoreReference : DocumentReference? = nil
                         
-                        let firestorePost = ["imageUrl":imageUrl!,"postedBy":Auth.auth().currentUser!.email,"postComment":self.commentTextFeild.text!,"date":FieldValue.serverTimestamp(),
+                        let firestorePost = ["imageUrl":imageUrl!,"postedBy":Auth.auth().currentUser!.email,"postCaption":self.commentTextFeild.text!,"date": String(TimeStamp),
                         "likes":0 ] as [String : Any]
                         
                         firestoreReference = firestoreDatabase.collection("Posts").addDocument(data: firestorePost,completion: { (error) in
@@ -67,6 +68,7 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
                             
                         })
                         
+                        print("timestamp:",TimeStamp)
                         
                     }
                     

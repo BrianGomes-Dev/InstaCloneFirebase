@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052CB4CE250E3443008BC637 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052CB4CD250E3443008BC637 /* FeedData.swift */; };
 		0535FF7025078B9B0047BD02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FF6F25078B9B0047BD02 /* AppDelegate.swift */; };
 		0535FF7225078B9B0047BD02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FF7125078B9B0047BD02 /* SceneDelegate.swift */; };
 		0535FF7425078B9B0047BD02 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FF7325078B9B0047BD02 /* LoginVC.swift */; };
@@ -16,6 +17,8 @@
 		0535FF7F25078B9E0047BD02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0535FF7D25078B9E0047BD02 /* LaunchScreen.storyboard */; };
 		0535FF8A25078B9E0047BD02 /* InstaCloneFirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FF8925078B9E0047BD02 /* InstaCloneFirebaseTests.swift */; };
 		0535FF9525078B9E0047BD02 /* InstaCloneFirebaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FF9425078B9E0047BD02 /* InstaCloneFirebaseUITests.swift */; };
+		054009712509505800967446 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0540096F2509505800967446 /* FeedCell.swift */; };
+		054009722509505800967446 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 054009702509505800967446 /* FeedCell.xib */; };
 		059D336D250797C600F77242 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D336C250797C600F77242 /* FeedVC.swift */; };
 		059D336F250797F300F77242 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D336E250797F300F77242 /* SettingsVC.swift */; };
 		059D33712507981100F77242 /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D33702507981100F77242 /* UploadVC.swift */; };
@@ -43,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052CB4CD250E3443008BC637 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		0535FF6C25078B9B0047BD02 /* InstaCloneFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0535FF6F25078B9B0047BD02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0535FF7125078B9B0047BD02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		0535FF9025078B9E0047BD02 /* InstaCloneFirebaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneFirebaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0535FF9425078B9E0047BD02 /* InstaCloneFirebaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneFirebaseUITests.swift; sourceTree = "<group>"; };
 		0535FF9625078B9E0047BD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0540096F2509505800967446 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		054009702509505800967446 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		059D336C250797C600F77242 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		059D336E250797F300F77242 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		059D33702507981100F77242 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
@@ -101,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052CB4CC250E3426008BC637 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				052CB4CD250E3443008BC637 /* FeedData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0535FF6325078B9B0047BD02 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +140,7 @@
 		0535FF6E25078B9B0047BD02 /* InstaCloneFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				052CB4CC250E3426008BC637 /* Models */,
 				05E6523D25078E9E0073A60E /* Views */,
 				05E6523B25078E480073A60E /* Controllers */,
 				0535FF7B25078B9D0047BD02 /* Assets.xcassets */,
@@ -171,6 +186,7 @@
 				059D336C250797C600F77242 /* FeedVC.swift */,
 				059D336E250797F300F77242 /* SettingsVC.swift */,
 				059D33702507981100F77242 /* UploadVC.swift */,
+				0540096F2509505800967446 /* FeedCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				0535FF7525078B9B0047BD02 /* Main.storyboard */,
+				054009702509505800967446 /* FeedCell.xib */,
 				0535FF7D25078B9E0047BD02 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -320,6 +337,7 @@
 				0535FF7F25078B9E0047BD02 /* LaunchScreen.storyboard in Resources */,
 				0535FF7C25078B9D0047BD02 /* Assets.xcassets in Resources */,
 				0535FF7725078B9B0047BD02 /* Main.storyboard in Resources */,
+				054009722509505800967446 /* FeedCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +470,8 @@
 				059D336D250797C600F77242 /* FeedVC.swift in Sources */,
 				0535FF7025078B9B0047BD02 /* AppDelegate.swift in Sources */,
 				0535FF7225078B9B0047BD02 /* SceneDelegate.swift in Sources */,
+				054009712509505800967446 /* FeedCell.swift in Sources */,
+				052CB4CE250E3443008BC637 /* FeedData.swift in Sources */,
 				059D336F250797F300F77242 /* SettingsVC.swift in Sources */,
 				059D33712507981100F77242 /* UploadVC.swift in Sources */,
 			);
