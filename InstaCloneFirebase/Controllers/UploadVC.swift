@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     @IBOutlet weak var UploadImageView: UIImageView!
     @IBOutlet weak var commentTextFeild: UITextField!
     
@@ -19,6 +19,7 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
         UploadImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         UploadImageView.addGestureRecognizer(gestureRecognizer)
+        commentTextFeild.delegate = self
     }
     
     @IBAction func UploadClicked(_ sender: Any) {
@@ -103,4 +104,14 @@ class UploadVC: UIViewController,UIImagePickerControllerDelegate,UINavigationCon
      
     
 
+}
+
+extension UploadVC:UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       // commentTextFeild.resignFirstResponder()
+        view.endEditing(true)
+        return true
+    }
+    
 }
